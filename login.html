@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page using javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Javascript login page </h2>
+    <div class="login">
+        <form  id="login" method="get" action="login.php">
+            <label><b>User Name</b></label>
+            <input type="text" name="Uname" id="Uname" placeholder="Username">
+            <br><br>
+            <label><b>Password</b></label>
+            <input type="password" name="Pass" id="pass" placeholder="Password">
+            <br><br>
+            <input type="button" name="log" id="log" value="Log In Here" onclick="login();">
+            <br><br>
+            <input type="checkbox"  id="check">
+            <span>Remember Me</span>
+            <br><br>
+            Forgot <a href="#">Password</a>
+        </form>
+    </div>
+
+    <!-- javascript code  -->
+
+    <script type="text/javascript">
+        function login(){
+        var username = document.getElementById('Uname').value;
+        var password = document.getElementById('pass').value;
+        if(username=='komal' &&password=='0106')
+        {
+            console.log("login successfuly");
+            location.assign('file:///C:/JS/task/login/welcomepage.html'); //need to redirect another page 
+        }
+        else{
+            window.alert('wrong user name and pasword!!');
+        }
+        console.log(username);
+        console.log(password);
+    }
+    </script>
+</body>
+</html>
